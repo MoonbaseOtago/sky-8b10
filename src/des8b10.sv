@@ -107,7 +107,7 @@ module des8b10(input clk, input reset, input din,
 
 	reg			r_rd;
 	wire	    sync_found = (r_d[7:0]==8'b01111100 || r_d[7:0]==8'b10000011);
-	wire	    sync_set = r_d[7:0]==8'b01111100;
+	wire	    sync_set = r_d[7:0]!=8'b01111100;
 
 	reg			r_ready;
 	assign ready = r_ready;

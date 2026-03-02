@@ -642,7 +642,7 @@ module ser8b10(input clk, input reset,  output dout, // high speed
 	if (r_reset) begin
 		r_rd <= 0;
 	end else
-	if (!ready) begin
+	if (!r_ready) begin
 		r_rd <= r_rd;	// insert SKP
 	end else begin
 		casez (rd)
