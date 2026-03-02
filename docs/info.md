@@ -17,7 +17,7 @@ To be added
 
 ## External hardware
 
-Set up the board to use a manual clock. The manual clock is divided by 10 to generate the internal clocks
+Set up the board to use a manual clock. The manual clock is divided by 10 to generate the internal clocks 
 
 - input data is 9 bit {uio\_in[0], ui\_in}  enable strobe is uio\_in[4]., it is clocked by the clock that is driven onto uioi\_out[6]
 
