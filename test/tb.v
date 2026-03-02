@@ -26,11 +26,16 @@ module tb ();
   reg fail = 0;
   wire rcv_clk = uio_out[5];
 
+`ifdef GL_TEST
+  wire VPWR = 1'b1;
+  wire VGND = 1'b0;
+`endif
+
   // Replace tt_um_example with your module name:
   tt_um_8b10 user_project (
-    `ifdef USE_POWER_PINS
-        .VPWR( 1'b1),     
-        .VGND( 1'b0),
+    `ifdef GL_TEST
+        .VPWR( VPWR),     
+        .VGND( VGND),
     `endif
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
