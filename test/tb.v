@@ -65,6 +65,9 @@ module tb ();
 `ifdef GL_TEST
 		fail <= 0;
 		done <= 1;
+		@(posedge clk);
+		@(posedge clk);
+		$finish
 `endif
 	end
 	integer i = 0;
