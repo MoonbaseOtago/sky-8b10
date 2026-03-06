@@ -67,7 +67,7 @@ module tb ();
 		done <= 1;
 		@(posedge clk);
 		@(posedge clk);
-		$finish
+		$finish;
 `endif
 	end
 	integer i = 0;
