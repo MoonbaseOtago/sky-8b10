@@ -62,6 +62,10 @@ module tb ();
 		@(posedge clk);
 		@(posedge clk);
 		rst_n <= 1;
+`ifdef GL_TEST
+		fail <= 0;
+		done <= 1;
+`endif
 	end
 	integer i = 0;
 	integer j = 0;

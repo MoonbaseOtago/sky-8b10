@@ -42,7 +42,7 @@ module ser8b10(input clk, input reset,  output dout, // high speed
 		r_count <= 9;
 		r_clk10 <= 0;
 		r_reset <= 1;
-		r_d <= 10'b110000_1011;
+		r_d <= 10'b110000_1011;	// only here to pass gatesim
 	end else begin
 		if (r_count == 0) begin
 			r_count <= 9;
