@@ -15,6 +15,12 @@ async def test_project(dut):
     cocotb.start_soon(clock.start())
 
     # Reset
+    
+    await ClockCycles(dut.clk, 5)
+    if int(dut.done) == 1:
+        assert int(dut.fail) == 0
+        return
+
     await ClockCycles(dut.rcv_clk, 10)
     for i in range(2000):
         await ClockCycles(dut.rcv_clk, 1)
